@@ -15,5 +15,6 @@ array_push($pessoas,array(
 'idade'=>25
 ));
 
-print_r($pessoas);
+//print_r($pessoas);
+print_r($pessoas[0],'nome');
 ?>
