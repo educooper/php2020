@@ -2,7 +2,8 @@
 
 //28. SESSÕES
 
-session_start();
+require_once("config.php");
+
 session_unset($_SESSION['nome']);
 //limpa a sessão especifica do nome ou ($_SESSION) para limpar todas as sessões ativas
 
