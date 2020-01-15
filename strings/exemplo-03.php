@@ -1,0 +1,13 @@
+<?php
+/*Aula 18 - Strings*/
+$nome = "joão rangel";
+
+$empresa = str_replace("o", "0", $empresa);
+$empresa = str_replace("e", "3", $empresa);
+
+echo $empresa;
+
+echo "<br />";
+
+
+?>
