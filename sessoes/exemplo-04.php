@@ -1,6 +1,8 @@
 <?php
 
-//28. SESSÕES
+//30. SESSÕES
+
+session_id('3oi216jbfidi4ma9u6qagttsmd');
 
 require_once("config.php");
 

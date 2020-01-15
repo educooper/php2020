@@ -1,6 +1,6 @@
 <?php
 
-//28. SESSÕES
+//29. SESSÕES
 
 require_once("config.php");
 
