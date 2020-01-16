@@ -5,15 +5,16 @@
 
 $a = 10;
 
-function trocaValor($b){
-   $a += 50;
+function trocaValor($b){// passagem por referencia usa-se &$b
+   $b += 50;
    return $b;
 }
 
 echo $trocaValor($a);
 echo "<br />";
 echo $a;
-
-echo
-
+/*resultado 
+60
+60
+*/
 ?>
