@@ -5,7 +5,7 @@
 //$ts = strtotime("2001-09-11");
 //$ts = strtotime("now");
 //$ts = strtotime("day");
-$ts = strtotime("+2 week");
+$ts = strtotime("+2 day");
 echo date("l, d/m/Y", $ts);
 
 ?>

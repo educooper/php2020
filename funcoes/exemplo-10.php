@@ -6,11 +6,13 @@ function test($callback){
 
     //processo lento
 
+    $callback();
+
 }
 
 test(function(){
 
-    echo "Terminou!"
+    echo "Terminou!";
 
 });
 
