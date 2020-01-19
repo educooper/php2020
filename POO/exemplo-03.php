@@ -3,7 +3,8 @@
 //43. MÉTODOS ESTATICOS
 
 /*
-
+Método estatico não precisa criar objeto para instanciar a classe e pra chama-lo.
+Pode ser usado no atributo. usar :: para chama-lo.
 */
 
 class Documento {
@@ -77,9 +78,13 @@ class Documento {
 
 }
 
-$cpf = new Documento();
-$cpf->setNumero("27261500801");
+//$cpf = new Documento();
+//$cpf->setNumero("27261500801");
 
-var_dump($cpf->getNumero());
+//var_dump($cpf->getNumero());
+
+
+var_dump(Documento::validarCPF("27261500801"));
+
 
 ?>
