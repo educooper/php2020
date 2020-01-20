@@ -2,6 +2,8 @@
 
 spl_autoload_register(function($nameClass){
 
+    var_dump($nameClass);
+   
     $dirClass = "class";
     $filename = $dirClass. DIRECTORY_SEPARATOR . ".php";
 
