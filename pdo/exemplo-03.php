@@ -2,7 +2,7 @@
 
 //58. PDO Inserindo dados 
 
-$conn = new PDO("sqlsrv:Database=dbphp7;server=localhost\SQLEXPRESS;ConnectionPooling=0","sa","root");
+$conn = new PDO("mysql:dbname=dbphp7;host=localhost","root","");
 //connection pooling mantem estado da conexão emm aberto - deixar porta aberta
 
 $stmt = $conn->prapare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(:LOGIN, :PASSWORD)");
