@@ -4,23 +4,23 @@
 
 $conn = new PDO("mysql:dbname=dbphp7;host=localhost","root","");
 
-$stmt = $conn->prapare("SELECT * FROM tb_usuarios ORDER BY deslogin");
+$stmt = $conn->prepare("SELECT * FROM td_usuarios ORDER BY deslogin");
 
 $stmt->execute();
 
-$resulta = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-foreach ($results as $row) {
+//foreach ($results as $row) {
+//
+//    foreach ($row as $key => $value){
+//
+//    echo "<strong>".$key."</strong>".$value."<br/>";
+//    }
+//
+//echo "===================================================<br />";
 
-foreach ($row as $key = $value){
+//}
 
-    echo "<strong>".$key."</strong>".$value."<br/>";
-    }
-
-echo "====================================================================<br />";
-
-}
-
-//var_dump($results);
+var_dump($results);
 
 ?>

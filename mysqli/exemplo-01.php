@@ -10,7 +10,7 @@ $conn = new mysqli("localhost","root","","dbphp7");
 
     }
 
-    $stmt = $conn->prepare("INSERT INTO tb_usuarios (deslogin, dessenha) VALUES(?, ?)");
+    $stmt = $conn->prepare("INSERT INTO td_usuarios (deslogin, dessenha) VALUES(?, ?)");
     
     $stmt->bind_param("ss", $login, $pass);
 
