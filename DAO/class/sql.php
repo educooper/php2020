@@ -8,7 +8,7 @@ class Sql extends PDO {
     
     public function __construct(){
 
-    $this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
+    $this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "hcode", "123456");
 
 }
 
@@ -26,6 +26,7 @@ class Sql extends PDO {
         $statement->bindParam($key,$value);
 
     }
+    
     public function query($rawQuery, $params = array()){
 
         $stmt = $this->conn->prepare($rawQuery);
@@ -38,11 +39,13 @@ class Sql extends PDO {
     
     }
 
-    public function select($rawQuery, $params = array()):array{
+    public function select($rawQuery, $params = array()):array
+    {
 
         $stmt = $this->query($rawQuery, $params);
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
     }
 
 
