@@ -28,9 +28,7 @@ require_once("config.php");
 //echo $usuario;
 
 
-$aluno = new Usuario();
-$aluno->setDeslogin("aluno");
-$aluno->setDessenha("@lun0");
+$aluno = new Usuario("aluno", "@lun0");
 
 $aluno->insert();
 

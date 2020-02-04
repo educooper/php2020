@@ -108,10 +108,10 @@ class Usuario {
 
     }
 
-    public function __construct(){
+    public function __construct($login = "", $password = ""){
 
         $this->setDeslogin($login);
-        $this->setDeslogin($password);
+        $this->setDessenha($password);
 
     }
 
