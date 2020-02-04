@@ -2,9 +2,9 @@
 
 require_once("config.php");
 // Carrega um usuario
-$pesquisa = new Usuario();
-$pesquisa->loadbyId(26);
-echo $pesquisa;
+//$pesquisa = new Usuario();
+//$pesquisa->loadbyId(26);
+//echo $pesquisa;
 
 //Carrega uma lsita de usuarios
 //
@@ -26,6 +26,15 @@ echo $pesquisa;
 //$usuario->login("vizinha", "69");
 
 //echo $usuario;
+
+
+$aluno = new Usuario();
+$aluno->setDeslogin("aluno");
+$aluno->setDessenha("@lun0");
+
+$aluno->insert();
+
+echo $aluno;
 
 
 ?>
