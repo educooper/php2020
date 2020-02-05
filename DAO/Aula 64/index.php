@@ -8,14 +8,14 @@ require_once("config.php");
 
 //Carrega uma lsita de usuarios
 
-$lista = Usuario::getList();
+//$lista = Usuario::getList();
 
-echo json_encode($lista);
+//echo json_encode($lista);
 
 //Carrega uma lsita de usuarios buscando por login
 
-//$search = Usuario::search("a");
+$search = Usuario::search("a");
 
-//echo json_encode($search);
+echo json_encode($search);
 
 ?>
