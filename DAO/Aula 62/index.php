@@ -1,5 +1,6 @@
 <?php
 
+//Funcionou!
 require_once("config.php");
 
 $sql = new Sql();
