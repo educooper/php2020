@@ -68,6 +68,16 @@ class Usuario {
                 
     }
     
+    public static function search($login){
+    
+        $sql = new Sql();
+                
+        return $sql->select("SELECT * FROM tb_usuarios_63 WHERE deslogin like :SEARCH ORDER BY deslogin", array(
+            ':SEARCH'=>"%".$login."%"
+        ));
+   
+    }
+    
     public function __toString(){
         
         return json_encode(array(
