@@ -2,9 +2,9 @@
 
 //Carrega uma lsita de usuarios
 
-$lista = Usuario::getList();
+//$lista = Usuario::getList();
 
-echo json_encode($lista);
+//echo json_encode($lista);
 
 //carrega um usuario usando um login e uma senha
 
@@ -13,5 +13,9 @@ echo json_encode($lista);
 //$usuario->login("vizinha", "69");
 
 //echo $usuario;
+
+//Carrega uma lista de usuários buscando pelo login
+$search = Usuario::search("Su");
+echo json_encode($search);
 
 ?>

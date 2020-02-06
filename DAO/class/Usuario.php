@@ -90,7 +90,7 @@ class Usuario {
         $this->setIdusuario($data['idusuario']);
         $this->setDeslogin($data['deslogin']);
         $this->setDessenha($data['dessenha']);
-        $this->setDtcadastro(new Datetime ($data['dtcadastro']));
+        $this->setDtcadastro(new DateTime ($data['dtcadastro']));
 
     }
 
@@ -120,7 +120,7 @@ class Usuario {
             "idusuario"=>$this->getIdusuario(),
             "deslogin"=>$this->getDeslogin(),
             "dessenha"=>$this->getDessenha(),
-            "dtCadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
+            "dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
         ));
     }
 }
