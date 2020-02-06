@@ -1,7 +1,7 @@
 <?php
-//63. PDO - DAO SELECT
 
 class Usuario {
+
     private $idusuario;
     private $deslogin;
     private $dessenha;
@@ -43,7 +43,7 @@ class Usuario {
 
         $sql = new Sql();
 
-        $results = $sql->select("SELECT * FROM tb_usuarios_63 WHERE idusuario = :ID", array(
+        $results = $sql->select("SELECT * FROM tb_usuarios_64 WHERE idusuario = :ID", array(
             ":ID"=>$id 
         ));
 
@@ -58,54 +58,16 @@ class Usuario {
 
             }
 
-        }  
-
-    public static function  getList(){
-        
-        $sql = new Sql();
-        
-        return $sql->select("SELECT * FROM tb_usuarios_63 ORDER BY deslogin;");
-                
-    }
-    
-    public static function search($login){
-    
-        $sql = new Sql();
-                
-        return $sql->select("SELECT * FROM tb_usuarios_63 WHERE deslogin like :SEARCH ORDER BY deslogin", array(
-            ':SEARCH'=>"%".$login."%"
-        ));
-   
-    }
-    
-    public function login($login, $password){
-        
-        $sql = new Sql();
-        
-        $results = $sql->select("SELECT * FROM tb_usuarios_63 WHERE deslogin = :LOGIN AND dessenha = : PASSWORD", array(
-        ":LOGIN"=>$login,
-         ":PASSWORD"=>$password
-        ));
-
-        if (count($results) > 0){
- 
-            $row = $results[0];
-
-            $this->setIdusuario($row['idusuario']);
-            $this->setDeslogin($row['deslogin']);
-            $this->setDessenha($row['dessenha']);
-            $this->setDtcadastro(new DateTime ($row['dtcadastro']));
-
-            }else {
-        
-                   throw new Exception("Login / Senha Inválidos.");
-            
         }
+        
+    public static function getList(){
 
-        }  
-    
-    }
-    
+        $sql = new Sql();
+
+        return $sql->select("SELECT * FROM tb_usuarios_64 ORDER BY deslogin;");
+
+    }     
+
     public function __toString(){
         
         return json_encode(array(

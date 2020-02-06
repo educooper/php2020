@@ -1,7 +1,5 @@
 <?php
 
-//62. DAO DATA ACCESS OBJECT
-
 class Sql extends PDO {
 
     private $conn;
@@ -17,6 +15,7 @@ class Sql extends PDO {
                 foreach ($parameters as $key => $value){
 
                     $this->setParam($statement,$key,$value);
+                    
                 }
                 
     }
