@@ -3,7 +3,7 @@
 require_once("config.php");
 // Carrega um usuario
 $root = new Usuario();
-$root->loadbyId(4);
+$root->loadbyId(26);
 echo $root;
 
 //Carrega uma lsita de usuarios
@@ -12,9 +12,9 @@ echo $root;
 //
 //echo json_encode($lista);
 
-//Carrega uma lsita de usuarios buscando por login
+//Carrega uma lista de usuarios buscando por login
 
-//$search = Usuario::search("a");
+//$search = Usuario::search("dri");
 
 //echo json_encode($search);
 

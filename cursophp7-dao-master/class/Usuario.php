@@ -43,7 +43,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_usuarios_63 WHERE idusuario = :ID", array(
+		$results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(
 			":ID"=>$id
 		));
 
@@ -59,7 +59,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_usuarios_63 ORDER BY deslogin;");
+		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin;");
 
 	}
 
@@ -67,7 +67,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		return $sql->select("SELECT * FROM tb_usuarios_63 WHERE deslogin LIKE :SEARCH ORDER BY deslogin", array(
+		return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin", array(
 			':SEARCH'=>"%".$login."%"
 		));
 
@@ -77,7 +77,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$results = $sql->select("SELECT * FROM tb_usuarios_63 WHERE deslogin = :LOGIN AND dessenha = :PASSWORD", array(
+		$results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN AND dessenha = :PASSWORD", array(
 			":LOGIN"=>$login,
 			":PASSWORD"=>$password
 		));
@@ -125,7 +125,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$sql->query("UPDATE tb_usuarios_63 SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
+		$sql->query("UPDATE tb_usuarios SET deslogin = :LOGIN, dessenha = :PASSWORD WHERE idusuario = :ID", array(
 			':LOGIN'=>$this->getDeslogin(),
 			':PASSWORD'=>$this->getDessenha(),
 			':ID'=>$this->getIdusuario()
@@ -137,7 +137,7 @@ class Usuario {
 
 		$sql = new Sql();
 
-		$sql->query("DELETE FROM tb_usuarios_63 WHERE idusuario = :ID", array(
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
 			':ID'=>$this->getIdusuario()
 		));
 
