@@ -1,10 +1,17 @@
 <?php
 
 require_once("config.php");
+//62. DAO
+$sql = new Sql();
+
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+
+echo json_encode($usuarios);
+
 // Carrega um usuario
-$root = new Usuario();
-$root->loadbyId(26);
-echo $root;
+//$root = new Usuario();
+//$root->loadbyId(26);
+//echo $root;
 
 //Carrega uma lsita de usuarios
 //
