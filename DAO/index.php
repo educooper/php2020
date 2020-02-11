@@ -42,4 +42,9 @@ echo json_encode($usuarios);
 //echo $aluno;
 
 
+$usuario = new Usuario();
+$usuario->loadbyId(8);
+$usuario->delete();
+echo $usuario;
+
 ?>
