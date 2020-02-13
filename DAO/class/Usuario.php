@@ -41,7 +41,8 @@ class Usuario {
 	
     public function loadById($id){
 		
-
+		$sql = new Sql();
+	    
 		$results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(
 			":ID"=>$id
 		));
@@ -88,6 +89,7 @@ class Usuario {
         }  else {
 
             throw new Exception("Login e/ou senha inválidos.");
+		
         }        
 
     }
@@ -157,7 +159,7 @@ class Usuario {
             "idusuario"=>$this->getIdusuario(),
             "deslogin"=>$this->getDeslogin(),
             "dessenha"=>$this->getDessenha(),
-            "dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
+	    "dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
         ));
     }
 }
