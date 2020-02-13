@@ -40,7 +40,8 @@ class Usuario {
     }
 	
     public function loadById($id){
-		
+        
+        $sql = new Sql();
 
 		$results = $sql->select("SELECT * FROM tb_usuarios WHERE idusuario = :ID", array(
 			":ID"=>$id
@@ -88,6 +89,7 @@ class Usuario {
         }  else {
 
             throw new Exception("Login e/ou senha inválidos.");
+            
         }        
 
     }

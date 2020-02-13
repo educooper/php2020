@@ -1,14 +1,12 @@
 <?php
 
-//62. DAO DATA ACCESS OBJECT
-
 class Sql extends PDO {
 
 	private $conn;
 
 	public function __construct(){
 
-		$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "hcode", "123456");
+		$this->conn = new PDO("mysql:host=localhost;dbname=dbphp7", "root", "");
 
 	}
 
