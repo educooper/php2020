@@ -13,37 +13,34 @@ echo json_encode($usuarios);
 //$root->loadbyId(26);
 //echo $root;
 
-//Carrega uma lsita de usuarios
-//
-//$lista = Usuario::getList();
-//
-//echo json_encode($lista);
-
-//Carrega uma lista de usuarios buscando por login
-
-//$search = Usuario::search("dri");
-
+//Carrega uma lista de usuários buscando pelo login
+//$search = Usuario::search("jo");
 //echo json_encode($search);
 
-
-//carrega um usuario usando um login e uma senha
-
+//carrega um usuário usando o login e a senha
 //$usuario = new Usuario();
-
-//$usuario->login("vizinha", "69");
+//$usuario->login("root", "!@#$");
 
 //echo $usuario;
+/*
+//Criando um novo usuário
+$aluno = new Usuario("aluno", "@lun0");
+$aluno->insert();
+echo $aluno;
+*/
+/*
+//Alterar um usuário
+$usuario = new Usuario();
 
+$usuario->loadById(5);
 
-//$aluno = new Usuario("aluno", "@lun0");
+$usuario->update("professor", "!@#$%¨&*");
 
-//$aluno->insert();
-
-//echo $aluno;
-
+echo $usuario;
+*/
 
 $usuario = new Usuario();
-$usuario->loadbyId(8);
+$usuario->loadbyId(14);
 $usuario->delete();
 echo $usuario;
 
