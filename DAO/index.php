@@ -1,10 +1,17 @@
 <?php
 
 require_once("config.php");
+//62. DAO
+$sql = new Sql();
+
+$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+
+echo json_encode($usuarios);
+
 // Carrega um usuario
-$root = new Usuario();
-$root->loadbyId(10);
-echo $root;
+//$root = new Usuario();
+//$root->loadbyId(10);
+//echo $root;
 // ============  ERROS =================
 
 //Carrega uma lsita de usuarios
@@ -37,5 +44,10 @@ $aluno->insert();
 
 echo $aluno;
 
+
+//$usuario = new Usuario();
+//$usuario->loadbyId(8);
+//$usuario->delete();
+//echo $usuario;
 
 ?>
