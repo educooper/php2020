@@ -1,7 +1,5 @@
 <?php
 
-//62. DAO DATA ACCESS OBJECT
-
 class Sql extends PDO {
 
 	private $conn;
