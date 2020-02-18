@@ -1,5 +1,5 @@
 <?php
-//69.fopen
+//70.Delete
 $file = fopen("teste.txt", "w+");
 
 fclose($file);

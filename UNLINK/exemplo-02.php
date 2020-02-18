@@ -1,11 +1,16 @@
 <?php
-//69.fopen
-$file = fopen("teste.txt", "w+");
+//70.Delete
+if (!is_dir("images")) mkdir("images");
 
-fclose($file);
+foreach (scandir("images") as $item){
+    if (!in_array($item,array(".", ".."))){
 
-unlink("teste.txt");
+        unlink("images/" . $item);
 
-echo "Arquivo removido com sucesso!";
+    }
+
+}
+
+echo "OK";
 
 ?>
