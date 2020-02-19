@@ -6,7 +6,9 @@ $dir2 = "folder_02";
 if(!is_dir($dir1)) mkdir($dir1);
 if(!is_dir($dir1)) mkdir($dir1);
 
-if(!file_exists($dir1 . DIRECTOR_SEPARATOR . $filename)) {
+$filename = "README.txt";
+
+if(!file_exists($dir1 . DIRECTORY_SEPARATOR . $filename)) {
 
   $file = fopen($dir1 . DIRECTORY_SEPARATOR . $filename, "w+");
   
@@ -15,5 +17,12 @@ if(!file_exists($dir1 . DIRECTOR_SEPARATOR . $filename)) {
   fclose($file);
 
 }
+
+rename( 
+  $dir1 . DIRECTORY_SEPARATOR . $filename, 
+$dir2 . DIRECTORY_SEPARATOR . $filename
+);
+
+echo "Arquivo movido com sucesso!";
 
 ?>
