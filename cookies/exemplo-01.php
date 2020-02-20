@@ -1,7 +1,7 @@
 <?php
 //76. Cookies
 
-$data = arrray(
+$data = array(
     "empresa"=>"HCode Treinamentos"  
   );
 
