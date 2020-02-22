@@ -2,28 +2,28 @@
 //77.Try e Catch
 function trataNome($name){
 
-    if(!name){
+    if(!$name){
 
-    throw new excepction("nenum nome foi informado.", 1);
+    throw new Exception("nenhum nome foi informado.", 1);
 
   }
 
-    echo ucfirst($name). "<br>";
+    echo ucfirst($name)."<br>";
+
+}
 
 try{
   
     trataNome("Joao");
     trataNome("");
 
-}catch(Excepcion $e){
+}catch(Exception $e){
     
     echo $e->getMessage();
     
 }finally{
 
     echo "Executou o Try!";
-
-}
 
 }
 ?>
