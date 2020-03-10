@@ -7,10 +7,14 @@
 </form>
 
 <?php
+
+$_POST['busca'] = '<a href="#"><strong>Oi</strong></a><script>alert("ok")</script>';
+
  if(isset($_POST['busca'])){
+    //echo $_POST('busca');
+    echo strip_tags($_POST['busca'], "<strong><a>"); 
     
-    echo $_POST('busca');
-    
+    echo htmlentities($_POST['busca']);
  }
 
 ?>
